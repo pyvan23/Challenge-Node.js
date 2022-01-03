@@ -1,0 +1,30 @@
+{
+  "name": "challenge-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyvan23/Challenge-Node.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pyvan23/Challenge-Node.js/issues"
+  },
+  "homepage": "https://github.com/pyvan23/Challenge-Node.js#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^7.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
