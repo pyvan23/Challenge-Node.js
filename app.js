@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const dB = require("./dataBase/db");
 
 //app  server
 const app = express();
