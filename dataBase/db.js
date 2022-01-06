@@ -2,6 +2,7 @@ const Sequelize = require("sequelize");
 const charactersModel = require("./models/characters");
 const genderModel = require("./models/gender");
 const MoviesOrSeriesModel = require("./models/moviesOrSeries");
+const userModel = require('./models/users');
 
 const sequelize = new Sequelize(
   "heroku_f6dc6aa5a4337c5",
@@ -15,6 +16,7 @@ const sequelize = new Sequelize(
 const characters = charactersModel(sequelize, Sequelize);
 const gender = genderModel(sequelize, Sequelize);
 const moviesOrSeries = MoviesOrSeriesModel(sequelize, Sequelize);
+const user = userModel(sequelize, Sequelize);
 
 sequelize.sync({ force: false }).then(() => {
   console.log("The tables are fine..");
@@ -22,6 +24,7 @@ sequelize.sync({ force: false }).then(() => {
 module.exports = {
   characters,
   gender,
-  moviesOrSeries
+  moviesOrSeries,
+  user
 }
 
