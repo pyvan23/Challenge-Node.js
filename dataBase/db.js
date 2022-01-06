@@ -4,9 +4,9 @@ const genderModel = require("./models/gender");
 const MoviesOrSeriesModel = require("./models/moviesOrSeries");
 
 const sequelize = new Sequelize(
-  "heroku_e8adc680ade950b",
-  "bafbc424c96856",
-  "b0cc16c7",
+  "heroku_f6dc6aa5a4337c5",
+  "bd677303050a7c",
+  "13aca40c",
   {
     host: "us-cdbr-east-05.cleardb.net",
     dialect: "mysql",
