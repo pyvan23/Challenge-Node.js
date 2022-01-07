@@ -40,7 +40,7 @@ router.post('/register', [
         },
         subject: "This is the wonderful world of disney!!",
         text: "This is the wonderful world of disney!!",
-        html: "<h1>This is the wonderful world of disney!!</h1>"
+        
     };
 
     sendgrid.send(message)
