@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jwt-simple");
 const sgMail = require("@sendgrid/mail");
 const { response } = require("express");
-const { EmailAddress } = require("@sendgrid/helpers/classes");
+
 
 const Api_Key =
   "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";
@@ -34,7 +34,7 @@ router.post(
       to: email,
       from: {
         name: "API DISNEY ALKEMY!",
-        email: "ivanmiguelalvarez@gmail.com",
+        email: "email@gmail.com",
       },
       subject: "This is the wonderful world of disney!!",
       text: "This is the wonderful world of disney!!",
