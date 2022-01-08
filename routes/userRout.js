@@ -6,11 +6,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jwt-simple");
 const sgMail = require("@sendgrid/mail");
 const { response } = require("express");
+require("dotenv").config
 
 
-const Api_Key =
-  "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";
-sgMail.setApiKey(Api_Key);
+  
+sgMail.setApiKey(process.env.API_KEY);
 
 router.post(
   "/register",

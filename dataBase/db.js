@@ -3,6 +3,7 @@ const charactersModel = require("./models/characters");
 const genderModel = require("./models/gender");
 const MoviesOrSeriesModel = require("./models/moviesOrSeries");
 const userModel = require('./models/users');
+require("dotenv").config
 
 const sequelize = new Sequelize(
   "heroku_f6dc6aa5a4337c5",
@@ -13,6 +14,7 @@ const sequelize = new Sequelize(
     dialect: "mysql",
   }
 );
+
 const characters = charactersModel(sequelize, Sequelize);
 const gender = genderModel(sequelize, Sequelize);
 const moviesOrSeries = MoviesOrSeriesModel(sequelize, Sequelize);

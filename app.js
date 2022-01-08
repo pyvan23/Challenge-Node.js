@@ -1,7 +1,9 @@
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const apiRoutes = require("./api/conection");
 require("./dataBase/db");
+require("dotenv").config
 
 //app  server
 const app = express();
@@ -15,6 +17,6 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Walt Disney World");
 });
 
-app.listen(3000, () => {
-  console.log("server on port 3000");
+app.listen(process.env.PORT, () => {
+  console.log("server yet");
 });
