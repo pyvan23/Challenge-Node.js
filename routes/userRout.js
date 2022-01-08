@@ -15,9 +15,9 @@ sgMail.setApiKey(Api_Key);
 router.post(
   "/register",
   [
-    check("username", "Name required").not().isEmpty(),
-    check("email", "Email must be ok").isEmail(),
-    check("password", "Password required").not().isEmpty(),
+    check("username", "need the name").not().isEmpty(),
+    check("email", "wrong email").isEmail(),
+    check("password", "need the password").not().isEmpty(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -33,7 +33,7 @@ router.post(
     const message = {
       to: email,
       from: {
-        name: "API DISNEY ALKEMY!",
+        name: "API challenge",
         email: "email@gmail.com",
       },
       subject: "This is the wonderful world of disney!!",
@@ -53,12 +53,12 @@ router.post("/login", async (req, res) => {
   if (userR) {
     const equals = bcrypt.compareSync(req.body.password, userR.password);
     if (equals) {
-      res.json({ success: createToken(userR) });
+      res.json({ congrats: createToken(userR) });
     } else {
-      res.json({ error: "Wrong username/password." });
+      res.json({ error: " Enter a wrong username or password." });
     }
   } else {
-    res.json({ error: "Wrong username/password." });
+    res.json({ error: "Enter a Wrong username or password." });
   }
 });
 
@@ -66,7 +66,7 @@ const createToken = (user) => {
   const payload = {
     userId: user.id,
     createdAt: moment().unix(),
-    expiredAt: moment().add(2, "minutes").unix(),
+    expiredAt: moment().add(10, "minutes").unix(),
   };
   return jwt.encode(payload, "keyword");
 };
